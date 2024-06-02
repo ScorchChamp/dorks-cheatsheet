@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Google Dork Cheatsheet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1, h2, h3 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+        th {
+            background-color: #f4f4f4;
+        }
+        pre {
+            background: #f4f4f4;
+            padding: 10px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Google Dork Cheatsheet</h1>
+
+        <h2>Search Filters</h2>
+        <table>
+            <tr>
+                <th>Filter</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>site</td>
+                <td>Finds results on a specific website or domain.</td>
+                <td><code>site:example.com</code></td>
+            </tr>
+            <tr>
+                <td>inurl</td>
+                <td>Searches for a keyword within a URL.</td>
+                <td><code>inurl:admin</code></td>
+            </tr>
+            <tr>
+                <td>intitle</td>
+                <td>Finds a keyword within a webpage's title.</td>
+                <td><code>intitle:"login page"</code></td>
+            </tr>
+            <tr>
+                <td>filetype</td>
+                <td>Locates specific file types like PDF or XLS.</td>
+                <td><code>filetype:pdf "budget report"</code></td>
+            </tr>
+            <tr>
+                <td>link</td>
+                <td>Finds web pages linking to a specific URL.</td>
+                <td><code>link:example.com</code></td>
+            </tr>
+            <tr>
+                <td>intext</td>
+                <td>Searches for keywords within the body text of a webpage.</td>
+                <td><code>intext:"security vulnerability"</code></td>
+            </tr>
+            <tr>
+                <td>allintitle</td>
+                <td>Finds pages with multiple keywords in the title.</td>
+                <td><code>allintitle:"sensitive data"</code></td>
+            </tr>
+            <tr>
+                <td>cache</td>
+                <td>Shows the cached version of a webpage.</td>
+                <td><code>cache:example.com</code></td>
+            </tr>
+            <tr>
+                <td>related</td>
+                <td>Displays pages related to a specific URL.</td>
+                <td><code>related:example.com</code></td>
+            </tr>
+            <tr>
+                <td>info</td>
+                <td>Provides details about a website, including cache and similar pages.</td>
+                <td><code>info:example.com</code></td>
+            </tr>
+            <tr>
+                <td>ext</td>
+                <td>Finds a specific file extension.</td>
+                <td><code>ext:docx "project plan"</code></td>
+            </tr>
+            <tr>
+                <td>define</td>
+                <td>Displays the definition of a word or phrase.</td>
+                <td><code>define:cybersecurity</code></td>
+            </tr>
+            <tr>
+                <td>phonebook</td>
+                <td>Searches for phone numbers and contact information for a person or business.</td>
+                <td><code>phonebook:"John Doe"</code></td>
+            </tr>
+            <tr>
+                <td>map</td>
+                <td>Shows a map of a location or address.</td>
+                <td><code>map:"1600 Amphitheatre Parkway, Mountain View, CA"</code></td>
+            </tr>
+            <tr>
+                <td>allinurl</td>
+                <td>Finds pages with multiple keywords in the URL.</td>
+                <td><code>allinurl:"secure login"</code></td>
+            </tr>
+            <tr>
+                <td>before</td>
+                <td>Finds content indexed before a specific date.</td>
+                <td><code>before:2020-01-01</code></td>
+            </tr>
+            <tr>
+                <td>after</td>
+                <td>Finds content indexed after a specific date.</td>
+                <td><code>after:2022-01-01</code></td>
+            </tr>
+            <tr>
+                <td>numrange</td>
+                <td>Searches for numbers within a specified range.</td>
+                <td><code>numrange:1000-2000</code></td>
+            </tr>
+            <tr>
+                <td>AROUND(X)</td>
+                <td>Finds pages where two terms are within a specified number of words from each other.</td>
+                <td><code>"data science" AROUND(3) "career"</code></td>
+            </tr>
+            <tr>
+                <td>inanchor</td>
+                <td>Searches for keywords within the anchor text of links on a webpage.</td>
+                <td><code>inanchor:"click here"</code></td>
+            </tr>
+        </table>
+
+        <h2>Examples</h2>
+        <pre><code>site:example.com "confidential"
+inurl:admin filetype:php
+intitle:"index of" "parent directory" "backup"
+filetype:xls "contact list"
+link:example.com
+intext:"database leak"
+allintitle:"financial report"
+cache:example.com
+related:example.com
+info:example.com
+ext:pdf "financial statements"
+define:machine learning
+phonebook:"Pizza Hut"
+map:"Central Park, New York"
+allinurl:"reset password"
+before:2021-01-01 "cyber attack"
+after:2022-01-01 "privacy policy"
+numrange:2000-2020
+"data breach" AROUND(5) "response plan"
+inanchor:"buy now"
+        </code></pre>
+
+        <h2>Operators</h2>
+        <table>
+            <tr>
+                <th>Operator</th>
+                <th>Description</th>
+                <th>Example</th>
+            </tr>
+            <tr>
+                <td>Search Term</td>
+                <td>Searches for the exact phrase within quotation marks. Useful for precise searches.</td>
+                <td><code>"artificial intelligence"</code></td>
+            </tr>
+            <tr>
+                <td>OR</td>
+                <td>Searches for either of the terms provided.</td>
+                <td><code>site:example.com OR site:example.org</code></td>
+            </tr>
+            <tr>
+                <td>AND</td>
+                <td>Searches for both terms provided.</td>
+                <td><code>site:example.com AND "privacy policy"</code></td>
+            </tr>
+            <tr>
+                <td>Combining Operators</td>
+                <td>Combines multiple operators for complex searches.</td>
+                <td><code>(site:example.com OR site:example.org) AND intext:"login"
+(site:example.com OR site:example.org) inurl:"login"</code></td>
+            </tr>
+            <tr>
+                <td>Include Results</td>
+                <td>Includes results containing the specified keyword.</td>
+                <td><code>+"data analysis"</code></td>
+            </tr>
+            <tr>
+                <td>Exclude Results</td>
+                <td>Excludes results containing the specified keyword.</td>
+                <td><code>-"social media"</code></td>
+            </tr>
+            <tr>
+                <td>Synonyms</td>
+                <td>Searches for synonyms of the specified keyword.</td>
+                <td><code>~developer</code></td>
+            </tr>
+            <tr>
+                <td>Glob Pattern (*)</td>
+                <td>Acts as a wildcard for unknown terms.</td>
+                <td><code>site:example.*</code></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
